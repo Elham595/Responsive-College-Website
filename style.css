@@ -1,0 +1,513 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+/************************************START HEADER***********************************/
+header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),
+    url(images/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+            /********************START NAV*******************/
+nav{
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* position: fixed; need to know how to make position fixed with relative*/
+}
+nav img{
+    width: 150px;
+}
+nav .nav-links{
+    flex: 1;
+    text-align: right;
+}
+nav .nav-links ul{
+    /* display: flex; */
+    margin-top: -35px;     /***************FIX THIS***************/
+}
+nav .nav-links ul li{
+    display: inline-block;
+    list-style: none;
+    padding:8px 12px;
+    position: relative;
+}
+nav .nav-links ul a{
+    text-decoration: none;
+    color: #fff;
+}
+nav .nav-links ul a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+}
+nav .nav-links ul a:hover::after{
+    width: 100%;
+}
+
+            /******************START TEXTBOX*****************/
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+    margin: 2% 0 3%;
+    font-size: 14px;
+}
+.text-box .btn{
+    display: inline-block;
+    border:1px solid #fff;
+    padding: 12px 34px;
+    background: transparent;
+    font-size: 13px;
+    cursor: pointer;
+}
+.text-box .btn a{
+    text-decoration: none;
+    color: #fff;   
+}
+.btn:hover{
+    background: #f44336;
+    border:2px solid #f44336;
+    transition: 1s;
+}
+        /****ICONS*****/
+nav .icons{display: none;}
+        /*****************SMALL SCREEN*****************/
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 30px;
+    }
+    nav .nav-links ul li{
+        display: block;
+    }
+    nav .nav-links ul a::after{background: #fff; }
+    nav .nav-links ul a:hover::after{width: 50%;}
+    nav .nav-links{
+        width: 160px;
+        height: 100vh;
+        background: #f44336;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        padding: 25% 5%;
+        z-index: 2;
+        transition: 1s;
+    }
+    /* header{overflow-x: hidden;} */
+    nav .icons{width: 30px; display: block;}
+    .icons{
+        position:absolute;
+        top: 20%;
+        right: 5%;
+        border: 1px solid transparent;
+        background-color: transparent;
+        font-size: 35px;
+        color: #fff;
+    }
+    .icons .cancel{
+        left: 20%;
+    } 
+}
+/*********************************END HEADER**********************************/
+/*****************START COURSES**********and what the same in campus**********/
+.courses,.campus,.facilities,.testimonials,footer,.about,.certificate,.location,.contact{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 3%;
+}
+.courses h2,.campus h2,.facilities h2,.testimonials h2,footer h2,.about h2,.certificate h2{
+    margin-bottom: 2%;
+    font-size: 40px;
+    font-weight: 600;
+}
+.courses P,.campus p,.facilities p,.testimonials p,footer p,.about p,.certificate p{
+    color: rgb(156, 155, 155);
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5%;
+}
+.roww{
+    display: flex;
+    justify-content: space-between;
+}
+.roww .course{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.roww .course:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+.courses .course h4{
+    text-align: center;
+    font-weight: 600;
+    padding-top: 2%;
+}
+.courses .course p{
+    width: 90%;
+    margin: 0 auto;
+}
+  
+        /*************SMALL SCREEN*************/
+@media (max-width:700px){
+    .courses h2,.campus h2,.facilities h2,.testimonials h2{
+        font-size: 28px;
+    }
+    .roww{
+        flex-direction: column;
+    }
+    .roww .course,.roww .campus-col,.roww .facilities-col,.roww .testimonials-col{
+        margin-bottom: 8%;
+    }
+}
+/********************************END COURSES*********************************/
+/********************************START CAMPUS*********************************/
+.campus-col{
+    height: 400px;
+    flex-basis: 32%;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    height: 100%;
+}
+.campus-col .layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: 0.5s;
+}
+.campus-col .layer:hover{
+    background:rgba(226, 0, 0, 0.7);
+}
+.campus-col .layer h3{
+    color: wheat;
+    font-size: 26px;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+.campus-col .layer:hover h3{
+    opacity: 1;
+    bottom: 49%;
+}
+/********************************END CAMPUS*********************************/
+/********************************START FACILITIES*********************************/
+.facilities-col{
+    flex-basis: 32%;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 15px;
+}
+.facilities-col h4{
+    padding: 4% 0;
+    text-align: left;
+}
+.facilities-col p{
+    text-align: left;
+}
+/********************************End FACILITIES*********************************/
+/*******************************START TESTIMONIALS******************************/
+.testimonials-col{
+    display: flex;
+    flex-basis: 46%;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    background: #fff3f3;
+    border-radius: 20px;
+    padding: 2%;
+}
+.testimonials-col img{
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 6%;
+    margin-left: 2%;
+}
+.testimonials-col .content h4{
+    font-weight: 600;
+    font-size: 18px;
+}
+.testimonials-col .content .bi{
+    color: #f44336;
+}
+.testimonials-col:hover{
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);   
+}
+/******************************END TESTIMONIALS********************************/
+/***************************START CALL TO ACTION******************************/
+.cta{
+    width: 80%;
+    height: 300px;
+    margin: 7% auto;
+    padding: 6% 0;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),
+    url(images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+}
+.cta h2{
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 40px;
+}
+.cta .btn{
+    display: inline-block;
+    border:1px solid #fff;
+    padding: 12px 34px;
+    background: transparent;
+    font-size: 13px;
+    cursor: pointer;
+}
+.cta .btn a{
+    text-decoration: none;
+    color: #fff;   
+}
+.btn:hover{
+    background: #f44336;
+    border:2px solid #f44336;
+    transition: 1s;
+}
+@media(max-width:700px){
+    .cta{
+        padding: 20% 0;
+
+    }
+    .cta h2{
+        font-size: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/***************************END CALL TO ACTION******************************/
+/******************************START FOOTER********************************/
+footer .social .bi{
+    color: #f44336;
+    font-size: 21px;
+    margin:0 13px;
+}
+footer .social .bi:hover{
+    font-size: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+} 
+footer .copy{
+    margin-bottom: 0;
+}
+.bi-suit-heart-fill{
+    color: #f44336;
+    font-size: 18px;
+}
+footer a{
+    color: rgb(156, 155, 155);
+}
+/* footer .social img{
+    width: 50px;
+}
+footer .social img:hover{
+    width: 70px;
+    transition: 0.5s;
+    cursor: pointer;
+} */
+@media(max-width:700px){
+    footer h2{
+        font-size: 24px;
+    }
+}
+/******************************END FOOTER********************************/
+/****************************START SUBHEADER******************************/
+.sub-header{
+    height: 60vh;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(30,9,0,0.7),rgba(30,9,0,0.7)),
+    url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.sub-header img{
+    margin-left: -1200px;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
+.about {
+    margin-top: 5%;
+    text-align: left;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about p{
+    padding: 14px 0px 15px ;
+}
+.about img{
+    width: 100%;
+}
+.about .about-btn{
+    border: 1px solid #f44336;
+    color: #f44336;
+    padding: 5px 20px;
+}
+.about .about-btn:hover{
+    border: 1px solid #f44336;
+    color: #fff;
+}
+@media (max-width:700px){
+    .sub-header img{
+        margin-left:-220px;
+        margin-top: 5px;
+        width: 130px;
+    }
+    .sub-header h1{
+        font-size: 33px;
+    }
+    .about h2{
+        font-size: 22px;
+    }
+
+}
+/****************************START Blog******************************/
+.certificate img{
+    width: 100%;
+}
+.certificate .left-col{
+    flex-basis: 66%;
+    text-align: left;
+}
+.certificate .left-col h2{
+    font-size: 30px;
+    padding-top: 25px;
+}
+.certificate .left-col p{
+    line-height: 1.7em;
+    margin-top: 10px;
+}
+.certificate .right-col{
+    flex-basis: 30%;
+    text-align: left;
+    padding-top: 10px;
+}
+.certificate .right-col h4{
+    color: #fff3f3;
+    background: #f44336;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 30px ;
+}
+.certificate .right-col div{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+
+}
+.certificate .left-col .comment{
+    border: 1px solid #bebbbb;
+    padding: 15px 15px;
+}
+.certificate .left-col .comment h2{
+    font-size: 27px;
+}
+.comment input,.comment textarea{
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    background-color: #e9e5e5;
+}
+.comment button{
+    color: #f44336;
+    border: 1px solid #f44336;
+}
+.comment button:hover{
+    color: #ffffff;
+}
+@media(max-width:700px){
+    .sub-header h1{
+        font-size: 30px;
+    }
+}
+/******************START COTACTS/LOCATION*******************/
+.location iframe{
+    width: 100%;
+}
+.contact .contact-col{
+    flex-basis: 48%;
+    text-align: left;
+}
+.contact .contact-col>div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+.contact .contact-col>div .bi{
+    color: #f44336;
+    font-size: 28px;
+    margin: 10px;
+    margin-right: 20px;
+}
+.contact .contact-col h5{
+    color: #555;
+    font-size: 20px;
+    font-weight: 400;
+}
+.contact .contact-col p{
+    color: rgb(156, 155, 155);
+}
+.contact-col form>input,.contact-col form>textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.contact-col form .btn{
+    border: 1px solid #f44336;
+    color: #f44336;
+    padding: 8px 20px;
+}
+.contact-col form .btn:hover{
+    color: wheat;
+}

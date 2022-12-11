@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- CDN FOR ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Blog</title>
+</head>
+<body>
+    <!---------------------------START HEADER-------------------------->
+    <section class="sub-header blog">
+        <!-------------START NAV------------>
+        <nav>
+            <img src="images/logo.png">
+            <div class="nav-links" id="navLinks">
+                <i class="bi bi-x-circle-fill icons" onclick="hidebar()"></i>
+                <!-- <button class="icons" onclick="hidebar()">#</button>instead of icons -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Course</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Cotact</a></li>
+                </ul>
+            </div>
+            <i class="bi bi-list icons" onclick="showbar()"></i>
+            <!-- <button class="icons" onclick="showbar()">=</button> -->
+        </nav>
+        <h1>Our Certificate & Online Programs For 2021</h1>
+    </section>
+     <!-----------------------------END HEADER--------------------------->
+     <section class="certificate">
+        <div class="roww">
+            <div class="left-col">
+                <img src="images/certificate.jpg" alt="">
+                <h2>Our Certificate & Online Programs For 2021</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     commodi tempore cupiditate iusto exercitationem fuga quis,
+                     laborum, aut animi a placeat! Molestiae, autem? fugas
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     Lorem ipsum dolor, sit amet consectetur<br><br>
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     commodi tempore cupiditate iusto exercitationem fuga quis,
+                     laborum, aut animi a placeat! Molestiae, autem? fuga quis
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     commodi tempore cupiditate iusto exercitationem fuga quis,
+                     laborum, aut animi a placeat! Molestiae, autem? fuga quis
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     commodi tempore cupiditate iusto exercitationem fuga quis,
+                     Lorem ipsum dolor, sit amet consectetur<br><br>
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     commodi tempore cupiditate iusto exercitationem fuga quis,
+                     laborum, aut animi a placeat! Molestiae, autem?
+                     laborum, aut animi a placeat! Molestiae, autem?
+                     Lorem ipsum dolor, sit amet consectetur<br><br>
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     commodi tempore cupiditate iusto exercitationem fuga quis,
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     commodi tempore cupiditate iusto exercitationem fuga quis,
+                     laborum, aut animi a placeat! Molestiae, autem? fuga quis
+                     laborum, aut animi a placeat! Molestiae, autem?
+                     Lorem ipsum dolor, sit amet consectetur
+                     laborum, aut animi a placeat! Molestiae, autem?<br><br>
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     commodi tempore cupiditate iusto exercitationem fuga quis,
+                     laborum, aut animi a placeat! Molestiae, autem?
+                     Lorem ipsum dolor, sit amet consectetur<br><br>
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Ratione deserunt corporis,fugiat ut maiores ipsam eveniet
+                     commodi tempore cupiditate iusto exercitationem fuga quis,
+                     laborum, aut animi a placeat! Molestiae, autem?
+                     Lorem ipsum dolor, sit amet consectetur
+                     laborum, aut animi a placeat! Molestiae, autem?
+                     laborum, aut animi a placeat! Molestiae, autem?<br>
+                    </p>
+                    <div class="comment">
+                        <form>
+                            <h2>Leave a Comment</h2>
+                            <input type="text" placeholder="Enter Name">
+                            <input type="text" placeholder="Enter Email">
+                            <textarea rows="5" placeholder="Your Comment"></textarea>
+                            <button type="submit" class="btn">Post Comment</button>
+                        </form>
+                    </div>
+            </div>
+            <div class="right-col">
+                <h4>Post Categories</h4>
+                <div>
+                    <span>Business Analytics</span><span>21</span>
+                </div>
+                <div>
+                    <span>Data Science</span><span>28</span>
+                </div>
+                <div>
+                    <span>Machine Learning</span><span>15</span>
+                </div>
+                <div>
+                    <span>Computer Science</span><span>34</span>
+                </div>
+                <div>
+                    <span>Autocad</span><span>42</span>
+                </div>
+            </div>
+   
+        </div>
+     </section>
+     <!------------------------START FOOTER---------------------->
+     <footer>
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.Lorem ipsum dolor
+            amet consectetur amet consectetur,Lorem ipsum dolor<br> sit amet consectetur, adipisicing elit.
+            amet consectetur amet consectetur. </p>
+        <div class="social">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+        </div><br>
+        <p class="copy">&copy; 2022, Made With <i class="bi bi-suit-heart-fill"></i> By Elham Balbaa</p>
+     </footer>
+     <!------------------------START FOOTER---------------------->
+        <!---------------JS TO TOGGLE THE MENU----------------->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        function showbar(){
+            navLinks.style.right="0";
+        }
+        function hidebar(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

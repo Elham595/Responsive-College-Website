@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1 class="completion">NOT YET</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, quis neque. Minus laborum nesciunt corporis quasi sed, doloribus magni consectetur, deleniti odit omnis quidem tenetur totam dolor mollitia temporibus expedita?</p>
+    <script>
+    //    function wait(ms){
+    //        return new Promise(function(resolve){
+    //            console.log(this)
+    //            window.setTimeout(function(){
+    //             resolve()
+    //            }, ms)
+                  
+    //        })
+    //    }
+    //    var mill = 2000
+    //    wait(2000).then(finish)
+    //    function finish(){
+    //        var completion =document.querySelector('.completion')
+    //        completion.innerHTML = 'complete after' + mill + 'ms'
+    //    }
+    // function hello(){
+    //     return new Promise(function(resolve, reject){
+    //     let result = document.addEventListener('readystatechange', function(){
+    //         if(document.readyState == 'loading'){
+    //               resolve()
+    //         }else {
+    //             reject()
+    //         }
+    //     })
+        
+    // })
+    // }
+    // hello().then(xx)
+    // hello().catch(yy)
+    // function xx(){
+    //     var completion =document.querySelector('.completion')
+    //         completion.innerHTML = 'Resolved'
+    // }
+    // function yy(){
+    //     console.log('faillllllllllllllled')
+    // }
+    ///////////////////////////////////////
+    // function get(url){
+    //     return new Promise(function(resolve, reject){
+    //         var req = new XMLHttpRequest();
+    //         req.open('GET', url)
+    //         req.onload = function (){
+    //             if(req.status === 200){
+    //                 resolve(req.response)
+    //             }else{
+    //                 reject(Error(req.statusText))
+    //             }
+    //         }
+    //         req.onerror = function(){
+    //             reject(Error('Network Erroooooooor'))
+    //         }
+    //         req.send()
+    //     })
+    // }
+
+    // get('www.google.com').then(xx)
+    // get('www.google.com').catch(yy)
+    // function xx(){
+    //     var completion = document.querySelector('.completion')
+    //     completion.innerHTML = 'Resolveeeeeeeeeeeeeeeeeed!!!'
+    // }
+    // function yy(){
+    //     var completion = document.querySelector('.completion')
+    //     completion.innerHTML = 'Rejected!!!'
+    // }
+    function get(url){
+        return fetch(url, {
+            method : 'get'
+        })
+    }
+    function getJson(url){
+        return get(url).then(function(response){
+            return response.json();
+        })
+    }
+
+    getJson('www.google.com').then(function (){console.log("lolololo")})
+    </script>
+</body>
+</html>
